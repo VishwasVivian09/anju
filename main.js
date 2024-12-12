@@ -7,11 +7,11 @@ const btnNo = document.querySelector(".btn-no");
 function getRandomNumber(min, max) {
   // Calculate the random number between min and max (inclusive)
   const randomNumber = Math.floor(Math.random() * (max - min + 1)) + min;
-
   return randomNumber;
 }
 
-btnNo.addEventListener("mouseover", (event) => {
+// Function to move button randomly within the container
+function moveButtonRandomly() {
   const containerHeight = container.getBoundingClientRect().height;
   const containerWidth = container.getBoundingClientRect().width;
   const btnHeight = btnNo.getBoundingClientRect().height;
@@ -21,6 +21,7 @@ btnNo.addEventListener("mouseover", (event) => {
 
   let newTop = btnTop;
   let newLeft = btnLeft;
+
   while (Math.abs(newTop - btnTop) < containerHeight / 3) {
     newTop = getRandomNumber(0, containerHeight - btnHeight);
   }
@@ -31,7 +32,13 @@ btnNo.addEventListener("mouseover", (event) => {
 
   btnNo.style.top = Math.floor(newTop) + "px";
   btnNo.style.left = Math.floor(newLeft) + "px";
-});
+}
+
+// Move the button randomly on mouseover
+btnNo.addEventListener("mouseover", moveButtonRandomly);
+
+// Move the button randomly on click
+btnNo.addEventListener("click", moveButtonRandomly);
 
 btnYes.addEventListener("click", (e) => {
   btnNo.classList.add("hide");
