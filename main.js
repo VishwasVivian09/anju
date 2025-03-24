@@ -39,7 +39,7 @@ btnYes.addEventListener("click", (e) => {
   imageTwo.classList.remove("hide");
 
     // WhatsApp message link
-  const phoneNumber = "91XXXXXXXXXX"; // Replace with your phone number
+  const phoneNumber = "917619553503"; // Replace with your phone number
   const message = encodeURIComponent("Hey! Let's plan our date and time 😊");
   const whatsappLink = `https://wa.me/${phoneNumber}?text=${message}`;
 
