@@ -37,4 +37,12 @@ btnYes.addEventListener("click", (e) => {
   btnNo.classList.add("hide");
   imageOne.classList.add("hide");
   imageTwo.classList.remove("hide");
+
+    // WhatsApp message link
+  const phoneNumber = "91XXXXXXXXXX"; // Replace with your phone number
+  const message = encodeURIComponent("Hey! Let's plan our date and time 😊");
+  const whatsappLink = `https://wa.me/${phoneNumber}?text=${message}`;
+
+  // Redirect to WhatsApp
+  window.location.href = whatsappLink;
 });
