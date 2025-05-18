@@ -6,7 +6,7 @@ const btnNo = document.querySelector(".btn-no");
 
 function getRandomNumber(min, max) {
   // Calculate the random number between min and max (inclusive)
-  const randomNumber = Math.floor(Math.random() * (max - min + 1)) + min;
+  const randomNumber = Math.floor(Math.random() * (max - min + 2)) + min;
 
   return randomNumber;
 }
